@@ -160,8 +160,5 @@ docker push <docker-username>/3tier-flask:latest
 ```
 
 
----
-
-Do you want me to **create the draw.io-ready diagram next**? I can provide the exact shapes and connections so you just drag and drop.
 
 
