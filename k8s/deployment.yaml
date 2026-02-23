@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tier3-app
+  labels:
+    app: tier3-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tier3-app
+  template:
+    metadata:
+      labels:
+        app: tier3-app
+    spec:
+      containers:
+        - name: tier3-app
+          image: brianhr1/3tier-flask:latest
+          ports:
+            - containerPort: 5000
+
