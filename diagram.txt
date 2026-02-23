@@ -18,3 +18,21 @@ VPC (10.0.0.0/16)
 └── IAM Roles
       ├── EKS Cluster Role
       └── Node Group Role
+
+                        Internet
+                           │
+                           ▼
+                AWS Elastic Load Balancer
+                           │
+                           ▼
+                Kubernetes Service (LoadBalancer)
+                           │
+                           ▼
+                EKS Worker Nodes (Private Subnets)
+                           │
+                           ▼
+                Kubernetes Pods (Flask App)
+                           │
+                           ▼
+                       VPC Network
+
