@@ -1,0 +1,20 @@
+VPC (10.0.0.0/16)
+│
+├── Public Subnet (AZ1)
+│     ├── Internet Gateway
+│     ├── NAT Gateway
+│     └── Elastic Load Balancer
+│
+├── Public Subnet (AZ2)
+│
+├── Private Subnet (AZ1)
+│     └── EKS Worker Node (EC2)
+│             └── Flask Pod
+│
+├── Private Subnet (AZ2)
+│     └── EKS Worker Node (EC2)
+│             └── Flask Pod
+│
+└── IAM Roles
+      ├── EKS Cluster Role
+      └── Node Group Role
